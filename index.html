@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №4 (Варіант 2) — Буштин Владислав</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-theme">
+
+    <div class="container">
+        <!-- Шапка сайту з перемикачем теми -->
+        <header id="main-header">
+            <div class="header-top">
+                <div>
+                    <h1>Буштин Владислав <span class="badge">SOC L1</span></h1>
+                    <p class="subtitle">Junior Cybersecurity Analyst | Варіант 2</p>
+                </div>
+                <div class="header-actions">
+                    <button id="theme-toggle" class="btn btn-outline" type="button" aria-label="Перемикач теми">
+                        🌙 Нічна тема
+                    </button>
+                    <button id="open-modal-btn" class="btn btn-primary" type="button">
+                        ✉️ Зворотний зв'язок
+                    </button>
+                </div>
+            </div>
+
+            <ul id="contact-info">
+                <li><strong>Email:</strong> <a href="mailto:vladyslav.bushtyn.kb.2025@lpnu.ua">vladyslav.bushtyn.kb.2025@lpnu.ua</a></li>
+                <li><strong>Телефон:</strong> <a href="tel:+380992281818">+38 (099) 228-18-18</a></li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/Bushik228" target="_blank" rel="noreferrer">github.com/Bushik228</a></li>
+            </ul>
+        </header>
+
+        <main class="grid-layout">
+            <section class="card full-width">
+                <h2>Про мене</h2>
+                <p>Мотивований Junior Cybersecurity Analyst із практичним розумінням мережевої безпеки, аналізу логів та принципів реагування на інциденти. Маю досвід роботи з SIEM-системами та аналізу трафіку у лабораторних умовах. Активно розвиваю навички моніторингу загроз (SOC L1) та орієнтуюся у фреймворку MITRE ATT&CK.</p>
+            </section>
+
+            <section class="card">
+                <h2>Практичний досвід та проєкти</h2>
+                <h3>Лабораторні дослідження (TryHackMe / Hack The Box)</h3>
+                <p class="date">2024 — 2026</p>
+                <ul>
+                    <li>Пройшов навчальний трек SOC Level 1 (топ 5% користувачів платформи TryHackMe).</li>
+                    <li>Аналізував pcap-файли мережевого трафіку у Wireshark для виявлення аномалій (сканування портів, брутфорс, SQLi).</li>
+                    <li>Налаштував локальне середовище Elastic SIEM для збору та аналізу Sysmon-логів з Windows-машини.</li>
+                </ul>
+
+                <h3>Асистент з IT-безпеки (Стажування) — Tech Solutions</h3>
+                <p class="date">Вересень 2025 — Лютий 2026</p>
+                <ul>
+                    <li>Брав участь у моніторингу подій безпеки та первинному відсіюванні хибних спрацювань (False Positives).</li>
+                    <li>Перевіряв конфігурації робочих станцій на відповідність базовим політикам безпеки.</li>
+                </ul>
+            </section>
+
+            <section class="card">
+                <h2>Освіта</h2>
+                <h3>Національний університет "Львівська політехніка"</h3>
+                <p>Спеціальність: 125 Кібербезпека (Бакалавр)</p>
+                <p class="date">2025 - 2029</p>
+
+                <h2 style="margin-top: 20px;">Володіння мовами</h2>
+                <ul>
+                    <li><strong>Українська:</strong> Рідна</li>
+                    <li><strong>Англійська:</strong> B2 (Upper-Intermediate)</li>
+                </ul>
+            </section>
+
+            <section class="card full-width">
+                <h2>Технічні навички</h2>
+                <ul class="skills-list">
+                    <li><strong>SIEM & Моніторинг:</strong> Splunk, Elastic Stack (ELK), Wireshark, Suricata.</li>
+                    <li><strong>Мережі:</strong> TCP/IP, DNS, HTTP/HTTPS, OSI Model, Subnetting, VPN, Firewalling.</li>
+                    <li><strong>ОС & Системи:</strong> Linux (Ubuntu, Kali), Windows Server, Active Directory.</li>
+                    <li><strong>Оцінка вразливостей:</strong> Nmap, Nessus, OWASP Top 10.</li>
+                    <li><strong>Скриптинг & Веб:</strong> JavaScript, Python, Bash, HTML5, CSS3, React.</li>
+                </ul>
+            </section>
+
+            <!-- Пункт 2: Відгуки роботодавців через Fetch API (Варіант 2) -->
+            <section class="card full-width" id="reviews-section">
+                <div class="section-header-flex">
+                    <h2>Відгуки попередніх роботодавців</h2>
+                    <span class="badge badge-accent">API: /posts/2/comments (Варіант 2)</span>
+                </div>
+                <p class="section-desc">Дані отримано асинхронно через Fetch API із сервісу JSONPlaceholder:</p>
+                
+                <div id="reviews-container" class="reviews-grid">
+                    <p class="loading">Завантаження коментарів...</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Пункт 1: Футер із відображенням даних про ОС та браузер із localStorage -->
+        <footer id="main-footer">
+            <div class="footer-content">
+                <p>© 2026 Буштин Владислав. Усі права захищено.</p>
+                
+                <div class="system-info-box">
+                    <h4>Системна інформація (зчитано з localStorage)</h4>
+                    <div id="os-browser-info">Зчитування даних...</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Пункт 3: Модальне вікно форми зворотного зв'язку (через 1 хв) -->
+    <div id="feedback-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <button id="close-modal-btn" class="modal-close" type="button" aria-label="Закрити">&times;</button>
+            <h3 id="modal-title">Форма зворотного зв'язку</h3>
+            <p class="modal-subtitle">Будь ласка, заповніть форму, і я зв'яжуся з вами найближчим часом.</p>
+            
+            <form action="https://formspree.io/f/mqkvrpqw" method="POST" id="feedback-form">
+                <div class="form-group">
+                    <label for="name">Ім'я <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required placeholder="Ваше ім'я">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required placeholder="email@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Номер телефону <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+38 (099) 000-00-00">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Повідомлення <span class="required">*</span></label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Введіть ваше повідомлення або пропозицію..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Надіслати</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
